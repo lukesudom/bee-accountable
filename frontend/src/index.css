@@ -42,6 +42,31 @@ h3 {
   padding: 0 20px;
   text-align: center;
 }
+.App {
+  text-align: center;
+  font-size: 22px;
+}
+
+input.inputBox {
+  font-size: 22px;
+  padding: 5px 8px 4px 8px;
+  border-radius: 3px;
+  border: 1px solid #666;
+}
+
+.calendarWrap {
+  display: inline-block;
+  position: relative;
+}
+
+.calendarElement {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  border: 1px solid #ccc;
+  z-index: 999;
+}
 
 .header {
   display: flex;
@@ -93,7 +118,7 @@ h3 {
 }
 
 .goal {
-  background-color: #f4f4f4;
+  background-color: #eef080;
   margin: 10px 0;
   padding: 20px 0 10px;
   position: relative;

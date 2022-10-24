@@ -30,7 +30,7 @@ function GoalForm() {
             onChange={(e) => setText(e.target.value)}
           />
               <input 
-            placeholder='Over how many days'
+            placeholder='Description'
             id='days'
             type='days'
             name='days'

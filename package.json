@@ -24,6 +24,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.4",
+    "react-step-progress": "^1.0.3",
     "request": "^2.88.2",
     "request-promise": "^4.2.6"
   },
