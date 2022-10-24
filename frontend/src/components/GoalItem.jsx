@@ -18,12 +18,15 @@ function GoalItem({ goal }) {
       <h2>Habit: {goal.text}</h2>
       <h2>{goal.days} Days</h2>
       <div className='App'>
-              <h4>React date selection</h4>
+              <h4>Calendar Selection</h4>
               <DateRangePickerComp />
               <Timer/>
-              <DaySelector/>
-              <ProgressBar/>
+              {/* <DaySelector/> */}
+              {/* <ProgressBar/> */}
             </div>
+      <div className='App'>
+        <ProgressBar/>
+      </div>
       <button onClick={() => dispatch(deleteGoal(goal._id))} className='close'>
         {/* Placeholder for green tick */} X
    
