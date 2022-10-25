@@ -1,6 +1,10 @@
+// Variables
+
 const jwt = require('jsonwebtoken')
 const asyncHandler = require('express-async-handler')
 const User = require('../model/userModel')
+
+//Protect function to be used in routes later
 
 const protect = asyncHandler(async (req, res, next) => {
   let token
@@ -32,5 +36,7 @@ const protect = asyncHandler(async (req, res, next) => {
     throw new Error('Not authorized, no token')
   }
 })
+
+//Exports
 
 module.exports = { protect }
