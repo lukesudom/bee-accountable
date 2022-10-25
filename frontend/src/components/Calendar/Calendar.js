@@ -1,3 +1,5 @@
+//Requirements
+
 import React, { useContext, useEffect } from "react";
 import { CalendarContext } from "../Context/CalendarContext";
 import Day from "./Day";
@@ -8,7 +10,6 @@ function Calendar() {
 
   useEffect(() => {
     setDate(new Date());
-    // eslint-disable-next-line
   }, []);
 
   if (days.length < 1) return null;

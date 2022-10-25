@@ -49,7 +49,7 @@ export default function CountdownApp() {
       <button onClick={handleReset} type="button" className='timer-btn'>
         Reset
       </button>
-      <div className='timer-countdown'>
+      <div className='timer-countdown btn btn-block'>
         {twoDigits(hoursToDisplay)}:{twoDigits(minutesToDisplay)}:
         {twoDigits(secondsToDisplay)}
       </div>

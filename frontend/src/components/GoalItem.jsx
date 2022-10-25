@@ -27,7 +27,7 @@ function GoalItem({ goal }) {
               {/* <ProgressBar/> */}
             </div>
       <div className='App'>
-        <h1> Days Complete: </h1>
+        <h1> Weekly Completion: </h1>
         <ProgressSteps
         marginBottom={0}
         topOffset={10}
