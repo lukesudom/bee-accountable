@@ -1,6 +1,7 @@
+//VARIABLES
+
 const asyncHandler = require("express-async-handler");
 const habitModel = require("../model/habitModel");
-
 const Habit = require('../model/habitModel');
 const User = require('../model/userModel');
 
@@ -102,6 +103,9 @@ const removeHabit = asyncHandler(async(req,res) => {
 
     res.status(200).json ({ id: req.params.id })
 })
+
+
+//EXPORTS 
 
 module.exports = {
     removeHabit,
