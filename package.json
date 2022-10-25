@@ -8,14 +8,12 @@
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "engines": {
-    "node": "16.15.0",
-    "npm": "8.11.0"
+  "engine": {
+    "node": "16.x"
   },
-
-  "author": "Luke Marshall",
+  "author": "Luke",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -32,6 +30,7 @@
     "mongoose": "^6.6.4",
     "react-color": "^2.19.3",
     "react-modal": "^3.16.1",
+    "react-step": "^0.4.1",
     "react-step-progress": "^1.0.3",
     "request": "^2.88.2",
     "request-promise": "^4.2.6"
