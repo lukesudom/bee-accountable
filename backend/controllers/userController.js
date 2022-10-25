@@ -1,11 +1,11 @@
+//VARIABLES
+
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const asyncHandler = require('express-async-handler')
 const User = require('../model/userModel')
 
-// @desc    Register new user
-// @route   POST /api/users
-// @access  Public
+// Register new user function -- PUBLIC -- Route = /api/users -- WORKING /bug fix
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body
 
@@ -14,7 +14,7 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error('Please add all fields')
   }
 
-  // Check if user exists
+  // Does user exist?
   const userExists = await User.findOne({ email })
 
   if (userExists) {
@@ -26,7 +26,7 @@ const registerUser = asyncHandler(async (req, res) => {
   const salt = await bcrypt.genSalt(10)
   const hashedPassword = await bcrypt.hash(password, salt)
 
-  // Create user
+  // Create new user
   const user = await User.create({
     name,
     email,
@@ -46,9 +46,7 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 })
 
-// @desc    Authenticate a user
-// @route   POST /api/users/login
-// @access  Public
+// Auth user  function -- PUBLIC -- Route = /api/users/login -- WORKING
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body
 
@@ -71,6 +69,9 @@ const loginUser = asyncHandler(async (req, res) => {
 // @desc    Get user data
 // @route   GET /api/users/me
 // @access  Private
+
+// Get user data function -- PRIVATE -- Route = /api/users/me -- WORKING
+
 const getMe = asyncHandler(async (req, res) => {
   res.status(200).json(req.user)
 })
@@ -81,6 +82,8 @@ const generateToken = (id) => {
     expiresIn: '30d',
   })
 }
+
+//EXPORTS
 
 module.exports = {
   registerUser,
