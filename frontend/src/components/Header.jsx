@@ -26,13 +26,13 @@ function Header() {
       <ul>
         {user ? (
           <li>
-            <button className='btn' onClick={onLogout}>
+            <button className='btn' onClick={onLogout} href='/'>
               <FaSignOutAlt /> Logout
             </button>
-            <Link to='/about'>
+            <Link to='/about' className='btn'>
                  Calendar
               </Link>
-            <Link to='/'>
+            <Link to='/' className='btn'>
               Dashboard
             </Link>
           </li>
